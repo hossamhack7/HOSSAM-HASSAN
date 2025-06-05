@@ -1,0 +1,19 @@
+# Python
+venv/
+.venv/
+*.pyc
+__pycache__/
+build/
+dist/
+*.egg-info/
+*.log*
+.env
+*.env
+env/
+env.bak
+.vscode/
+
+# Project specific
+user_ltm_data_files/
+agent_outputs/
+sandbox/

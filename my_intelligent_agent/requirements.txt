@@ -1,0 +1,7 @@
+Flask>=2.0
+Flask-CORS>=3.0 # Added for CORS support
+uvicorn>=0.15
+python-dotenv>=0.19
+asgiref # Added for ASGI support with Uvicorn
+google-generativeai # For Gemini API access
+# Add other dependencies as we identify them
