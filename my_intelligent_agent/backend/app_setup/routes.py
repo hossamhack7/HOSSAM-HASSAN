@@ -18,6 +18,82 @@ def chat_completions():
         return {}, 200
     return chat_completion_handler.handle_chat_completions()
 
+@app.route('/v1/chat', methods=['POST', 'OPTIONS'])
+def wordpress_chat():
+    """Simple chat endpoint for WordPress plugin integration"""
+    from flask import request, jsonify
+    import logging
+    
+    logger = logging.getLogger(__name__)
+    
+    if request.method == 'OPTIONS':
+        # Handle preflight CORS request
+        return {}, 200
+    
+    try:
+        data = request.get_json()
+        if not data:
+            return jsonify({'error': 'No JSON data provided'}), 400
+        
+        message = data.get('message', '').strip()
+        if not message:
+            return jsonify({'error': 'Message is required'}), 400
+        
+        api_key = data.get('api_key', '')
+        
+        logger.info(f"WordPress chat request: {message[:50]}...")
+        
+        # Use the existing chat completion handler but format it for simple response
+        # Create a simplified request format
+        chat_request = {
+            "messages": [
+                {
+                    "role": "user",
+                    "content": message
+                }
+            ],
+            "model": "gemini-1.5-flash-latest",
+            "max_tokens": 500,
+            "temperature": 0.7
+        }
+        
+        # Temporarily modify the request to use our data
+        original_json = request.json
+        request.json = chat_request
+        
+        # Call the existing handler
+        response = chat_completion_handler.handle_chat_completions()
+        
+        # Restore original request
+        request.json = original_json
+        
+        # Extract the response content
+        if isinstance(response, tuple):
+            response_data, status_code = response
+        else:
+            response_data = response
+            status_code = 200
+        
+        if status_code == 200 and 'choices' in response_data:
+            ai_response = response_data['choices'][0]['message']['content']
+            return jsonify({
+                'success': True,
+                'response': ai_response
+            })
+        else:
+            logger.error(f"Chat completion error: {response_data}")
+            return jsonify({
+                'success': False,
+                'error': 'Failed to get AI response'
+            }), 500
+            
+    except Exception as e:
+        logger.error(f"WordPress chat error: {str(e)}")
+        return jsonify({
+            'success': False,
+            'error': 'Internal server error'
+        }), 500
+
 # Ensure routes are registered when this module is imported by flask_app.py
 # If not using blueprints, the @app.route decorator registers them on import
 # as long as 'app' here refers to the Flask app instance being configured.

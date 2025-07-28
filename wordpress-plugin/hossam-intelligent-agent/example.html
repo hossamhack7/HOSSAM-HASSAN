@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مثال على إضافة المساعد الذكي لحسام</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #0073aa;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        h2 {
+            color: #333;
+            border-bottom: 2px solid #0073aa;
+            padding-bottom: 10px;
+        }
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+        .feature-card {
+            background: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #0073aa;
+        }
+        .feature-card h3 {
+            color: #0073aa;
+            margin-top: 0;
+        }
+        .code-block {
+            background: #2d3748;
+            color: #e2e8f0;
+            padding: 15px;
+            border-radius: 5px;
+            font-family: 'Courier New', monospace;
+            overflow-x: auto;
+            margin: 15px 0;
+        }
+        .demo-section {
+            background: #e8f4f8;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+        .installation-steps {
+            counter-reset: step-counter;
+        }
+        .installation-steps li {
+            counter-increment: step-counter;
+            margin: 15px 0;
+            padding: 10px;
+            background: #f0f8ff;
+            border-radius: 5px;
+            position: relative;
+            padding-right: 50px;
+        }
+        .installation-steps li::before {
+            content: counter(step-counter);
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            background: #0073aa;
+            color: white;
+            border-radius: 50%;
+            width: 25px;
+            height: 25px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 12px;
+        }
+        .demo-chat {
+            max-width: 600px;
+            margin: 20px auto;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🤖 إضافة المساعد الذكي لحسام لووردبريس</h1>
+        
+        <div class="demo-section">
+            <h2>نظرة عامة</h2>
+            <p>هذه الإضافة تربط موقع WordPress الخاص بك بنظام المساعد الذكي الخلفي لحسام، مما يوفر ميزات مدعومة بالذكاء الاصطناعي لزوار موقعك.</p>
+        </div>
+
+        <h2>الميزات الرئيسية</h2>
+        <div class="feature-grid">
+            <div class="feature-card">
+                <h3>💬 واجهة محادثة تفاعلية</h3>
+                <p>أضف واجهة محادثة ذكية إلى أي صفحة أو منشور باستخدام كود مختصر بسيط.</p>
+            </div>
+            <div class="feature-card">
+                <h3>⚙️ لوحة تحكم سهلة</h3>
+                <p>واجهة إدارية بسيطة لتكوين الاتصال بالخادم الخلفي وإدارة الإعدادات.</p>
+            </div>
+            <div class="feature-card">
+                <h3>🌍 دعم متعدد اللغات</h3>
+                <p>يدعم اللغة العربية والإنجليزية مع إمكانية إضافة لغات أخرى.</p>
+            </div>
+            <div class="feature-card">
+                <h3>📱 تصميم متجاوب</h3>
+                <p>يعمل بشكل مثالي على جميع الأجهزة والشاشات.</p>
+            </div>
+            <div class="feature-card">
+                <h3>🔒 آمان متقدم</h3>
+                <p>يستخدم أفضل ممارسات الأمان في WordPress مع التحقق من الهوية.</p>
+            </div>
+            <div class="feature-card">
+                <h3>🚀 أداء سريع</h3>
+                <p>تقنية AJAX للتفاعل السريع دون إعادة تحميل الصفحة.</p>
+            </div>
+        </div>
+
+        <h2>التثبيت والإعداد</h2>
+        <ol class="installation-steps">
+            <li>ارفع مجلد الإضافة إلى <code>/wp-content/plugins/</code></li>
+            <li>فعّل الإضافة من لوحة تحكم WordPress</li>
+            <li>اذهب إلى الإعدادات > المساعد الذكي</li>
+            <li>أدخل رابط خادم المساعد الذكي الخلفي</li>
+            <li>احفظ الإعدادات</li>
+        </ol>
+
+        <h2>كيفية الاستخدام</h2>
+        <p>استخدم الكود المختصر التالي في أي صفحة أو منشور:</p>
+        
+        <div class="code-block">
+[hia_chat]
+        </div>
+        
+        <p>أو مع خيارات متقدمة:</p>
+        
+        <div class="code-block">
+[hia_chat title="مساعد ذكي" height="500px" width="100%"]
+        </div>
+
+        <h2>مثال على واجهة المحادثة</h2>
+        <div class="demo-chat">
+            <div style="background: #0073aa; color: white; padding: 15px; text-align: center;">
+                <h3 style="margin: 0;">💬 تحدث مع المساعد الذكي</h3>
+            </div>
+            <div style="height: 300px; overflow-y: auto; padding: 15px; background: #f9f9f9;">
+                <div style="margin-bottom: 15px; padding: 10px 15px; border-radius: 18px; background: white; border: 1px solid #ddd; max-width: 80%;">
+                    مرحبا! كيف يمكنني مساعدتك اليوم؟
+                </div>
+                <div style="margin-bottom: 15px; padding: 10px 15px; border-radius: 18px; background: #0073aa; color: white; max-width: 80%; margin-left: auto; text-align: right;">
+                    أريد معرفة المزيد عن هذا الموقع
+                </div>
+                <div style="margin-bottom: 15px; padding: 10px 15px; border-radius: 18px; background: white; border: 1px solid #ddd; max-width: 80%;">
+                    بالطبع! هذا موقع يستخدم المساعد الذكي لحسام لتوفير تجربة تفاعلية مميزة للزوار. يمكنني مساعدتك في الإجابة على أسئلتك وتقديم المعلومات التي تحتاجها.
+                </div>
+            </div>
+            <div style="padding: 15px; background: white; border-top: 1px solid #ddd; display: flex; gap: 10px;">
+                <input type="text" placeholder="اكتب رسالتك..." style="flex: 1; padding: 10px 15px; border: 1px solid #ddd; border-radius: 20px; outline: none;">
+                <button style="padding: 10px 20px; background: #0073aa; color: white; border: none; border-radius: 20px; cursor: pointer;">إرسال</button>
+            </div>
+        </div>
+
+        <h2>متطلبات النظام</h2>
+        <ul>
+            <li>WordPress 5.0 أو أحدث</li>
+            <li>PHP 7.4 أو أحدث</li>
+            <li>خادم المساعد الذكي الخلفي (Python Flask)</li>
+        </ul>
+
+        <h2>التكوين المتقدم</h2>
+        <p>يمكن تخصيص الإضافة من خلال:</p>
+        <ul>
+            <li>تعديل ملفات CSS في مجلد <code>assets/css/</code></li>
+            <li>إضافة وظائف جديدة في الملف الرئيسي للإضافة</li>
+            <li>إنشاء ملفات ترجمة جديدة في مجلد <code>languages/</code></li>
+        </ul>
+
+        <h2>الدعم والمساعدة</h2>
+        <p>للحصول على المساعدة:</p>
+        <ul>
+            <li>🔗 <strong>GitHub:</strong> https://github.com/hossamhack7/HOSSAM-HASSAN</li>
+            <li>📚 راجع ملف README.md للتفاصيل التقنية</li>
+            <li>📋 راجع ملف INSTALL.md لدليل التثبيت المفصل</li>
+        </ul>
+
+        <div class="demo-section">
+            <h2>ملاحظة مهمة</h2>
+            <p><strong>تأكد من تشغيل خادم المساعد الذكي الخلفي قبل استخدام الإضافة.</strong> يجب أن يكون الخادم يعمل على العنوان المكون في إعدادات الإضافة (افتراضياً: http://localhost:5000).</p>
+        </div>
+    </div>
+</body>
+</html>

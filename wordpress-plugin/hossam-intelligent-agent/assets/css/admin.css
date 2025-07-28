@@ -1,0 +1,83 @@
+/* Admin styles for Hossam Intelligent Agent */
+
+.hia-admin-info {
+    margin-top: 30px;
+    padding: 20px;
+    background: #f1f1f1;
+    border-radius: 5px;
+}
+
+.hia-admin-info h2 {
+    margin-top: 0;
+    color: #0073aa;
+}
+
+.hia-admin-info h3 {
+    color: #333;
+    margin-top: 20px;
+}
+
+.hia-admin-info ul {
+    margin-left: 20px;
+}
+
+.hia-admin-info li {
+    margin-bottom: 8px;
+    line-height: 1.5;
+}
+
+.form-table th[scope="row"] {
+    width: 200px;
+}
+
+.form-table input[type="url"],
+.form-table input[type="password"] {
+    width: 400px;
+}
+
+.description {
+    font-style: italic;
+    color: #666;
+}
+
+/* Settings page specific styles */
+.wrap h1 {
+    margin-bottom: 20px;
+}
+
+.settings-section {
+    margin-bottom: 30px;
+}
+
+.hia-status-indicator {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin-right: 8px;
+}
+
+.hia-status-indicator.connected {
+    background-color: #46b450;
+}
+
+.hia-status-indicator.disconnected {
+    background-color: #dc3232;
+}
+
+.hia-test-connection {
+    margin-top: 10px;
+}
+
+.hia-test-connection button {
+    background: #0073aa;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.hia-test-connection button:hover {
+    background: #005a87;
+}

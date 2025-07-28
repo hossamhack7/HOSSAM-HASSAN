@@ -1,0 +1,86 @@
+# Translation template for Hossam Intelligent Agent Plugin
+# Language: Arabic (ar)
+
+msgid ""
+msgstr ""
+"Project-Id-Version: Hossam Intelligent Agent 1.0.0\n"
+"POT-Creation-Date: 2024-01-01 12:00+0000\n"
+"PO-Revision-Date: 2024-01-01 12:00+0000\n"
+"Language-Team: Arabic\n"
+"Language: ar\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=(n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5);\n"
+
+msgid "Hossam Intelligent Agent Settings"
+msgstr "إعدادات المساعد الذكي لحسام"
+
+msgid "Intelligent Agent"
+msgstr "المساعد الذكي"
+
+msgid "Main Settings"
+msgstr "الإعدادات الرئيسية"
+
+msgid "Backend URL"
+msgstr "رابط الخادم الخلفي"
+
+msgid "API Key"
+msgstr "مفتاح API"
+
+msgid "Enable Chat Widget"
+msgstr "تفعيل واجهة المحادثة"
+
+msgid "Configure the connection to your Intelligent Agent backend."
+msgstr "قم بتكوين الاتصال بالخادم الخلفي للمساعد الذكي."
+
+msgid "The URL of your Intelligent Agent backend server (e.g., http://localhost:5000)"
+msgstr "رابط خادم المساعد الذكي الخلفي (مثال: http://localhost:5000)"
+
+msgid "API key for authenticating with the backend (if required)"
+msgstr "مفتاح API للمصادقة مع الخادم الخلفي (إذا كان مطلوباً)"
+
+msgid "Enable the chat widget functionality"
+msgstr "تفعيل وظائف واجهة المحادثة"
+
+msgid "About This Plugin"
+msgstr "حول هذه الإضافة"
+
+msgid "This plugin connects your WordPress site to Hossam's Intelligent Agent backend system, providing AI-powered features."
+msgstr "تربط هذه الإضافة موقع WordPress الخاص بك بنظام المساعد الذكي الخلفي لحسام، مما يوفر ميزات مدعومة بالذكاء الاصطناعي."
+
+msgid "Usage"
+msgstr "الاستخدام"
+
+msgid "Use the shortcode [hia_chat] to display a chat interface on any page or post."
+msgstr "استخدم الكود المختصر [hia_chat] لعرض واجهة محادثة في أي صفحة أو منشور."
+
+msgid "Configure the backend URL to point to your running intelligent agent server."
+msgstr "قم بتكوين رابط الخادم الخلفي للإشارة إلى خادم المساعد الذكي الخاص بك."
+
+msgid "Chat with AI Assistant"
+msgstr "تحدث مع المساعد الذكي"
+
+msgid "Chat is currently disabled."
+msgstr "المحادثة معطلة حالياً."
+
+msgid "Type your message..."
+msgstr "اكتب رسالتك..."
+
+msgid "Send"
+msgstr "إرسال"
+
+msgid "Message cannot be empty"
+msgstr "الرسالة لا يمكن أن تكون فارغة"
+
+msgid "Error connecting to backend: "
+msgstr "خطأ في الاتصال بالخادم الخلفي: "
+
+msgid "Response received"
+msgstr "تم استلام الرد"
+
+msgid "Backend error: "
+msgstr "خطأ في الخادم الخلفي: "
+
+msgid "Unknown error"
+msgstr "خطأ غير معروف"
